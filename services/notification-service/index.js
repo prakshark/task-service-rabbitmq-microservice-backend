@@ -14,7 +14,8 @@ async function start() {
             channel.ack(msg);
         })
     } catch (error) {
-        
+        console.log(error);
+        return resizeBy.status(500).json(error);
     }
 }
 
